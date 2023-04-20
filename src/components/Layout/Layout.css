@@ -1,0 +1,107 @@
+.layout {
+    height: 90vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 100px;
+    width: 80%;
+    margin-left: 150px;
+    overflow-y: scroll;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    border-radius: 100%;
+    width: 32px;
+    z-index: 2;
+}
+
+.ball:first-of-type {
+    z-index: 1;
+}
+
+.ball {
+    margin-left: -10px;
+    width: 28px;
+    height: 28px;
+    border-radius: 100%;
+    border: 2px solid black;
+}
+
+.layout-header_left, .layout-header_right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.layout-header {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.layout-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 30px;
+}
+
+.layout-main_left {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-direction: column;
+}
+
+.layout-main_left p {
+    line-height: 40px;
+} 
+
+.layout-main_left h1 {
+    font-size: 55px;
+} 
+
+.layout-main_right {
+    width: 50%;
+}
+
+.aleatorio {
+    padding: 20px;
+    border-radius: 5px;
+    width: 250px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-hues {
+    font-size: 27px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.elements {
+    margin-top: 30px;
+}
+
+.layout-colors {
+    width: 80%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.mostrar {
+    opacity: 1;
+}
