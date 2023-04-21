@@ -13,7 +13,7 @@ const Layout = ({ setColors, colors, getRandomPalette, setShowPalette, showPalet
           <div className="icons">
             <img
               className="icon"
-              src="/assets/cara-triste.png"
+              src="/assets/triste.png"
               style={{
                 backgroundColor:
                   colors &&

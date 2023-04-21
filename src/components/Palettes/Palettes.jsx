@@ -2,23 +2,19 @@ import React, { useEffect, useState } from "react";
 import "./Palettes.css";
 import Palette from "../Palette/Palette";
 
-const model = { model: "ui" };
-
 const Palettes = ({ setColors, setPalettes, palettes, showPalette }) => {
-
   const getPalettes = async () => {
-    const palettesArray = [];
 
-    for (let i = 0; i < 30; i++) {
-      const resultado = await fetch("http://colormind.io/api/", {
-        method: "POST",
-        body: JSON.stringify(model),
-      });
-      const res = await resultado.json();
-      palettesArray.push([...res.result]);
-    }
+    const resultado = await fetch(
+      "https://saddly-hues-back.vercel.app/palettes"
+    );
+    const res = await resultado.json();
 
-    setPalettes([...palettes, ...palettesArray]);
+    const palettesMapped = res.map((pal) => pal.result);
+
+    setTimeout(() => {
+      setPalettes([...palettesMapped]);
+    }, 2000);
   };
 
   useEffect(() => {

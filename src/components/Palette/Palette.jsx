@@ -2,7 +2,7 @@ import React from "react";
 import "./Palette.css";
 
 const Palette = ({ palette, setColors }) => {
-
+  console.log(palette);
   return (
     <div className="palette" style={{backgroundColor: `rgb(${palette[0][0]}, ${palette[0][1]}, ${palette[0][2]})`}} onClick={() => setColors([...palette])}>
       {palette.map((color) => {
